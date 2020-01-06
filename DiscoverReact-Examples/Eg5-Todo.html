@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            class TodosList extends React.Component {  
+                render() {
+                    const listItemStyle = {
+                                padding: '1rem',
+                                borderBottom: '1px solid #ededed'
+                            }
+                        return (
+                            <ul style={{listStyle: 'none'}} >
+                                {
+                                    this.props.todos
+                                        .map((item, index) => 
+                                                    <li style={listItemStyle} key={index}>
+                                                        {item}
+                                                    </li>
+                                            )
+                                }
+                            </ul>
+                        )
+                    }
+
+            }
+            class App extends React.Component {              
+                constructor(props){
+                    super(props);
+                    this.state = {
+                        inputValue: '',
+                        items: ['task1','task2','task3']
+                    };
+                }
+
+                onChange = (event) => {
+                    this.setState({ inputValue: event.target.value });
+                }
+
+                onSubmit = (event) => {
+                    event.preventDefault();
+                    this.setState({
+                        inputValue: '',
+                        items: [...this.state.items, this.state.inputValue]
+                    });
+                }
+
+                render() {
+                    return (
+                        <div>
+                            <form onSubmit={this.onSubmit}>
+                                <label>
+                                    <input type="text" 
+                                    name="name" 
+                                    placeholder="todo" 
+                                    value={this.state.inputValue} 
+                                    onChange={this.onChange} />
+                                </label>
+                                <input className="button" type="submit" value="Add Item" />
+                            </form>
+                            <TodosList todos={this.state.items}/>
+                        </div>   
+                    )
+                }
+            }
+            ReactDOM.render(
+                <App />, 
+                document.getElementById("root")
+            );
+        </script>
+    </body>
+</html>
