@@ -6,4 +6,4 @@ My workshop at Algeria2.0( Upload in Progress... ).
 
 ## [Examples to Discover React](./DiscoverReact-Examples/)
 
-## [Code React with WP](./ReactWP/)
+## [Code of React Project with WP](./ReactWP/)
