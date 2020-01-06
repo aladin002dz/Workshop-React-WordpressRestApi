@@ -4,10 +4,14 @@ My workshop at Algeria2.0( Upload in Progress... ).
 
 ## [Slides](./Slides.pdf)
 
-## [Code Examples to Discover React](./DiscoverReact-Examples/)
+## Examples to Discover React
 
-## [Demo Examples to Discover React](./DiscoverReact-Examples/)
+### [Code](./DiscoverReact-Examples/)
 
-## [Code of React Project with WP](./ReactWP/)
+### [Demo](./DiscoverReact-Examples/)
 
-## [Demo of React Project with WP](https://aladindev.com/Workshop-React-WordpressRestApi/)
+## React Project with WP
+
+### [Code](./ReactWP/)
+
+### [Demo](https://aladindev.com/Workshop-React-WordpressRestApi/)
