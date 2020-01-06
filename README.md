@@ -6,12 +6,12 @@ My workshop at Algeria2.0( Upload in Progress... ).
 
 ## Examples to Discover React
 
-### [Code](./DiscoverReact-Examples/)
+  * [Code](./DiscoverReact-Examples/)
 
-### [Demo](./DiscoverReact-Examples/)
+  * [Demo](./DiscoverReact-Examples/)
 
 ## React Project with WP
 
-### [Code](./ReactWP/)
+  * [Code](./ReactWP/)
 
-### [Demo](https://aladindev.com/Workshop-React-WordpressRestApi/)
+  * [Demo](https://aladindev.com/Workshop-React-WordpressRestApi/)
