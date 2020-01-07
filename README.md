@@ -14,4 +14,4 @@ My workshop at Algeria2.0( Upload in Progress... ).
 
   * [Code](./ReactWP/)
 
-  * [Demo](https://aladindev.com/Workshop-React-WordpressRestApi/React-WpRestApi)
+  * [Demo](https://react-wordpress-restapi.netlify.com/)
