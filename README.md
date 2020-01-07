@@ -1,6 +1,6 @@
 # Workshop React with WordPress Rest Api (Headless CMS)  
 
-My workshop at Algeria2.0, 12/23/2012.
+My workshop at Algeria2.0 ( Dec 23, 2019).
 
 ## [Slides](./Slides.pdf)
 
