@@ -22,6 +22,12 @@ body {
   border-color: #dfe1e2;
 }
 
+#root a {
+  display: block;
+  padding: 1rem; 
+  border-bottom: 1px solid rgb(237, 237, 237);
+}
+
 .button {
   background-color: #55ADD1;
   border-color: rgb(73, 155, 187);
