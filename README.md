@@ -8,10 +8,10 @@ My workshop at Algeria2.0( Upload in Progress... ).
 
   * [Code](./DiscoverReact-Examples/)
 
-  * [Demo](https://aladindev.com/DiscoverReact-Examples/)
+  * [Demo](https://aladindev.com/Workshop-React-WordpressRestApi/React-HelloWorld)
 
 ## React Project with WP
 
   * [Code](./ReactWP/)
 
-  * [Demo](https://aladindev.com/Workshop-React-WordpressRestApi/)
+  * [Demo](https://aladindev.com/Workshop-React-WordpressRestApi/React-WpRestApi)
