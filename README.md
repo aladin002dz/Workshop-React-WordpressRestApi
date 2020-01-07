@@ -8,7 +8,7 @@ My workshop at Algeria2.0( Upload in Progress... ).
 
   * [Code](./DiscoverReact-Examples/)
 
-  * [Demo](./DiscoverReact-Examples/)
+  * [Demo](https://aladindev.com/DiscoverReact-Examples/)
 
 ## React Project with WP
 
