@@ -1,6 +1,6 @@
-# Workshop React with WordPress Rest Api (Headless CMS) - Upload in progress ...  
+# Workshop React with WordPress Rest Api (Headless CMS)  
 
-My workshop at Algeria2.0( Upload in Progress... ).
+My workshop at Algeria2.0, 12/23/2012.
 
 ## [Slides](./Slides.pdf)
 
