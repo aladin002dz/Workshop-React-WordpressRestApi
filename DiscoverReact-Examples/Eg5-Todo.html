@@ -1,23 +1,85 @@
 <html>
     <head>
-        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+        <!-- Modules to run React -->
+            <!-- module to get React elements, mostly components -->
+            <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+            <!-- module to render react elements into the web page -->
+            <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+            <!-- module to use RJX and ES6 -->
+            <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+            
+            <!--just to add some nice looking :) -->
+            <link rel="stylesheet" href="style.css">
+      </head>
+      <body>
+    
+        <!-- where react elements will be rendered -->
         <div id="root"></div>
+
         <script type="text/babel">
-            class TodosList extends React.Component {  
+            /* React Component named "App" **********************************************************************/
+            class App extends React.Component {              
+                constructor(props){
+                    super(props);
+                    this.state = {
+                        inputValue: '',
+                        /* dumb data */
+                        items: ['task1','task2','task3']
+                    };
+                }
+
+                /* to follow the user input */
+                onChange = (event) => {
+                    this.setState({ inputValue: event.target.value });
+                }
+
+                /* to store the user input into the state, and eventually into the DB */
+                onSubmit = (event) => {
+                    event.preventDefault();
+                    this.setState({
+                        inputValue: '',
+                        items: [...this.state.items, this.state.inputValue]
+                    });
+                }
+                
+                /* every react component must have a render method to define the UI */
                 render() {
+                    return (
+                        <div>
+                            /* a form to get the user input */
+                            <form onSubmit={this.onSubmit}>
+                                <label>
+                                    <input type="text" 
+                                    name="name" 
+                                    placeholder="todo" 
+                                    value={this.state.inputValue} 
+                                    onChange={this.onChange} />
+                                </label>
+                                <input className="button" type="submit" value="Add Item" />
+                            </form>
+
+                            /* Call for the component child */
+                            <TodosList todos={this.state.items}/>
+                        </div>   
+                    )
+                }
+            }
+
+            /* a child React component, for the parent component above  */
+            class TodosList extends React.Component {  
+                
+                /* every react component must have a render method to define the UI */
+                render() {
+                    /* inline style example in React*/
                     const listItemStyle = {
                                 padding: '1rem',
                                 borderBottom: '1px solid #ededed'
                             }
+
                         return (
                             <ul style={{listStyle: 'none'}} >
                                 {
+                                    /* display the data got from the parent with "props" to the UI */
                                     this.props.todos
                                         .map((item, index) => 
                                                     <li style={listItemStyle} key={index}>
@@ -30,45 +92,8 @@
                     }
 
             }
-            class App extends React.Component {              
-                constructor(props){
-                    super(props);
-                    this.state = {
-                        inputValue: '',
-                        items: ['task1','task2','task3']
-                    };
-                }
 
-                onChange = (event) => {
-                    this.setState({ inputValue: event.target.value });
-                }
-
-                onSubmit = (event) => {
-                    event.preventDefault();
-                    this.setState({
-                        inputValue: '',
-                        items: [...this.state.items, this.state.inputValue]
-                    });
-                }
-
-                render() {
-                    return (
-                        <div>
-                            <form onSubmit={this.onSubmit}>
-                                <label>
-                                    <input type="text" 
-                                    name="name" 
-                                    placeholder="todo" 
-                                    value={this.state.inputValue} 
-                                    onChange={this.onChange} />
-                                </label>
-                                <input className="button" type="submit" value="Add Item" />
-                            </form>
-                            <TodosList todos={this.state.items}/>
-                        </div>   
-                    )
-                }
-            }
+            /* Rendering the React component into the DOM ****************************/
             ReactDOM.render(
                 <App />, 
                 document.getElementById("root")
